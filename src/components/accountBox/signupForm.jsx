@@ -1,0 +1,1 @@
+// Formulario para of cadastro so seguir o "loginForm" dentro da pasta accountBox
