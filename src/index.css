@@ -13,7 +13,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Lila2021-09-04: Precisamos mudar as fontes dos textos para os da FCamara */
+/*Lila 210904: Precisamos alinear e mudar as fontes dos textos para os da FCamara */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
