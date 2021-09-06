@@ -1,22 +1,12 @@
-import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import styled from "styled-components";
-import { AccountBox } from './components/accountBox';
+import Routes from './routes';
 
-const AppContainer= styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-`;
+//Maisa 210904: A função retorna as rotas
 
 function App() {
-    return <AppContainer>
-        <AccountBox/>
-    </AppContainer>;
+    return (
+        <Routes />      
+    );
 }
 
 export default App;

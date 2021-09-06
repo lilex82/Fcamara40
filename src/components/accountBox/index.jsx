@@ -1,10 +1,10 @@
 //Lila 210904: Aqui ficam todos o CSS para os contenedores//
 
-import React from 'react';
+/* import React from 'react'; */
 import styled from "styled-components";
-import { LoginForm } from "./loginForm";
+/* import { LoginForm } from "./loginForm"; */
 
-const BoxContainer = styled.div`
+export const BoxContainer = styled.div`
   width: 280px;
   min-height: 550px;
   display: flex;
@@ -16,7 +16,7 @@ const BoxContainer = styled.div`
   overflow: hidden;
 `;
 
-const TopContainer = styled.div`
+export const TopContainer = styled.div`
   width: 100%;
   height: 250px;
   display: flex;
@@ -26,7 +26,7 @@ const TopContainer = styled.div`
   padding-bottom: 5em;
 `;
 
-const BackDrop = styled.div`
+export const BackDrop = styled.div`
 width: 160%;
 height:550px;
 position: absolute;
@@ -44,13 +44,13 @@ background:linear-gradient(
 );
 `;
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
 width: 100%;
 display:flex;
 flex-direction:column;
 `;
 
-const HeaderText =styled.h2`
+export const HeaderText =styled.h2`
 font-size: 30px;
 font-weight: 600;
 line-height: 1.20;
@@ -59,7 +59,7 @@ z-index:10;
 margin:0;
 `;
 
-const SmallText = styled.h5`
+export const SmallText = styled.h5`
 color: RGB(254 68 0);
 font-weight: 500;
 font-size: 11px;
@@ -68,14 +68,26 @@ margin: 0;
 margin-top:7px;
 `; 
 
-const InnerContainer = styled.div`
+export const InnerContainer = styled.div`
 width:100%;
 display:flex;
 flex-direction: column;
 padding:0 1.8em;
 `;
 
-export function AccountBox(props) {
+//Maisa 210905: Retirado o CSS do AppContainer do arquivo App.js e incluído neste arquivo
+export const AppContainer= styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`;
+
+//Maisa 210905: Comentei esta parte do código pois incluí diretamente nos arquivos loginForm.jsx e signupForm.jsx
+
+/* export function AccountBox(props) {
   return <BoxContainer>
     <TopContainer>
       <BackDrop />
@@ -89,5 +101,5 @@ export function AccountBox(props) {
       <LoginForm/>
     </InnerContainer>
   </BoxContainer>
-}
+} */
 
