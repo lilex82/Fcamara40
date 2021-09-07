@@ -22,8 +22,10 @@ export default function SignUpForm(props) {
   //Maisa 210905: Alerta para informar que o cadastro foi realizado com sucesso
 
   function handleSignUp(e) {
-      alert('Cadastro realizado com sucesso!');
-      e.preventDefault();
+    
+    alert('Cadastro realizado com sucesso!');
+    e.preventDefault();
+  
   }
 
   return (
