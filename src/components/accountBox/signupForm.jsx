@@ -19,13 +19,26 @@ export default function SignUpForm(props) {
   const [ email, setEmail ] = useState('');
   const [ password, setPassword] = useState();
 
+  const [ errorMsg, setErrorMsg ] = useState('');
+
   //Maisa 210905: Alerta para informar que o cadastro foi realizado com sucesso
 
   function handleSignUp(e) {
-    
-    alert('Cadastro realizado com sucesso!');
     e.preventDefault();
-  
+    const values = [name, lastName, CPF, email, password];
+    let errorMsg = '';
+
+    const allFieldsFilled = values.every((field) => {
+      const value = `${field}`.trim();
+      return value !== '';
+    });
+
+    if (allFieldsFilled) {
+      alert('Cadastro realizado com sucesso!');
+    } else {
+      errorMsg = 'Por favor, preencha todos os campos.';
+    }
+    setErrorMsg(errorMsg);
   }
 
   return (
@@ -52,6 +65,7 @@ export default function SignUpForm(props) {
             <Marginer direction="vertical" margin="1em" />
             <Marginer direction="vertical" margin="1,5em" />
             <SubmitButton type="submit" onClick={handleSignUp}>Cadastrar</SubmitButton>
+            {errorMsg && <S.SmallText className="errorMsg">{errorMsg}</S.SmallText> }
           </BoxContainer>
         </S.InnerContainer>
       </S.BoxContainer>
