@@ -15,7 +15,7 @@ export default function SignUpForm(props) {
   /* const history = useHistory(); */
   const [ name, setName ] = useState('');
   const [ lastName, setlastName ] = useState('');
-  const [ CPF, setCPF ] = useState();
+  // const [ CPF, setCPF ] = useState();
   const [ email, setEmail ] = useState('');
   const [ password, setPassword] = useState();
 
