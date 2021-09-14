@@ -52,11 +52,13 @@
 // body
 {
   "date": '2021-09-14',
-  "periodo": 1
+  "periodo":"string", 
+  "email" : "user@email.com"
 }
  
 // success - status code: 200 - agendamento realizado
 // error - status code: 400 - periodo não disponivel, por favor tente outro dia ou horário
+//https://sequelize.org/master/manual/model-querying-finders.html
 ```
 
 # entities
