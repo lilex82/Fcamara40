@@ -20,7 +20,7 @@ $ npm install axios
 
 In the project directory, you can run:
 
-## `npm start`
+#### `npm start`
 
 localhost:xxxx
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -30,6 +30,6 @@ You will also see any lint errors in the console.
 
 ## Membros
 
-<a href=“https://github.com/maisawr“>Maisa Wolff</a>
+<a href="https://github.com/maisawr">Maisa Wolff</a>
 
-<a href=“https://github.com/lilex82“>Lila An</a>
+<a href="https://github.com/lilex82">Lila An</a>
