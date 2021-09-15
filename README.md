@@ -17,10 +17,10 @@ git clone https://github.com/lilex82/Fcamara.git
 ```
 ## Tecnologias
 
-<a href="https://expressjs.com">Express</a>
-<a href="https://sequelize.org/master/">Sequelize ORM</a>
-<a href="https://www.postgresql.org/">PostgreSQL</a>
-<a href="https://reactjs.org/">React</a>
+-<a href="https://expressjs.com">Express</a>
+-<a href="https://sequelize.org/master/">Sequelize ORM</a>
+-<a href="https://www.postgresql.org/">PostgreSQL</a>
+-<a href="https://reactjs.org/">React</a>
 
 
 ## FRONTEND:

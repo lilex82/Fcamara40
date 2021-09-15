@@ -6,29 +6,33 @@ import {
     FormContainer,
     Input,
     SubmitButton,
-  } from "../accountBox/common";
+} from "../accountBox/common";
 import { Marginer } from "../marginer";
 import * as S from "./index";
 import 'react-calendar/dist/Calendar.css';
 
+//Lila 0915 fazer o import checkAvailability que vai importar do './src/components/services/api.js'
+//Lila 0915 checkAvailability roda no back e banco de dados para verificar que tem disponibilidade 
+
+
 export default function AgendamentoSaoPaulo(props) {
     const [value, setValue] = useState(new Date());
-    const [ horarioReserva, setHorarioReserva ] = useState('');
+    const [horarioReserva, setHorarioReserva] = useState('');
     const escritorio = "São Paulo";
     const history = useHistory();
-    
+
     //react-calendar
-    
+
     function onChange(nextValue) {
-      setValue(nextValue);
+        setValue(nextValue);
 
-      //Integração com o back/banco de dados para saber se tem vagas
+        //Integração com o back/banco de dados para saber se tem vagas
 
-            
+
     }
 
     //Transformar data no formato "dd/mm/yyyy" - alterar para "yyyy/mm/dd"
-    let optionsDate = {     
+    let optionsDate = {
         dateStyle: ('short')
     }
     let date = value.toLocaleDateString('pt-br', optionsDate);
@@ -38,7 +42,7 @@ export default function AgendamentoSaoPaulo(props) {
     const periodoTarde = "14h às 18h";
     const periodoIntegral = "Integral";
 
-    
+
 
     function confirmacao() {
         var reserva = {
@@ -47,29 +51,29 @@ export default function AgendamentoSaoPaulo(props) {
             periodo: horarioReserva
         }
 
-        let minhasReservas = [];      
+        let minhasReservas = [];
         minhasReservas.push(reserva);
 
         console.log(reserva)
         console.log(minhasReservas)
-        
+
         if (date !== '' && horarioReserva !== '') {
             history.push('confirmacaoreserva');
         } else {
             alert("Necessário escolher data e horário");
         }
     }
-    
-    return (          
+
+    return (
         <S.AppContainer>
             <S.BoxContainer>
                 <S.TopContainer>
-                <S.BackDrop />
-                <S.HeaderContainer>
-                    <S.HeaderText>Agendamento</S.HeaderText>
-                    <S.HeaderText>Escritório {escritorio}</S.HeaderText>
-                    <S.SmallText>Escolha a data e o período desejados</S.SmallText>
-                </S.HeaderContainer>
+                    <S.BackDrop />
+                    <S.HeaderContainer>
+                        <S.HeaderText>Agendamento</S.HeaderText>
+                        <S.HeaderText>Escritório {escritorio}</S.HeaderText>
+                        <S.SmallText>Escolha a data e o período desejados</S.SmallText>
+                    </S.HeaderContainer>
                 </S.TopContainer>
                 <S.InnerContainer>
                     <BoxContainer>
@@ -83,7 +87,7 @@ export default function AgendamentoSaoPaulo(props) {
                             <button value={periodoManha} onClick={e => setHorarioReserva(e.target.value)}>{periodoManha}</button>
                             <button value={periodoTarde} onClick={e => setHorarioReserva(e.target.value)}>{periodoTarde}</button>
                             <button value={periodoIntegral} onClick={e => setHorarioReserva(e.target.value)}>{periodoIntegral}</button>
-                        </div>            
+                        </div>
                         <Marginer direction="vertical" margin="1em" />
                         <Marginer direction="vertical" margin="1,5em" />
                         <SubmitButton type="submit" onClick={confirmacao}>Agendar</SubmitButton>
