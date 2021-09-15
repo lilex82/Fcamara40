@@ -4,13 +4,13 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     queryInterface.bulkInsert('Offices', [{
       name: 'SP',
-      max_capacity: 2,
+      max_capacity: 240,
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
       name: "SANTOS",
-      max_capacity: 3,
+      max_capacity: 40,
       createdAt: new Date(),
       updatedAt: new Date()
     }]);
