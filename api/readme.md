@@ -39,7 +39,7 @@
 ```
  
 ## Verificar disponibilidade
-[GET] /officies/:officeId/availability?date=2021-09-14
+[GET] /offices/officeId/availability?date=2021-09-14&officeId=1
  
 ```javascript
 // response
@@ -80,6 +80,10 @@
 }
 
 ```
+## Availability
+```javascript
+
+```
 
 
 ### Criação da entidade Office
@@ -95,3 +99,7 @@ npx sequelize-cli seed:generate --name create-offices
 ```bash
 npx sequelize-cli model:generate --name Book --attributes date:date,time:string,email:string
 ```
+
+
+Gerar sorteo de mesa vai ficar para o projeto futuro: 
+(Pending) Models/table

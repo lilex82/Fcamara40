@@ -14,6 +14,9 @@ module.exports = {
       time: {
         type: Sequelize.STRING
       },
+      officeId: {
+        type: Sequelize.INTEGER
+      },
       email: {
         type: Sequelize.STRING
       },

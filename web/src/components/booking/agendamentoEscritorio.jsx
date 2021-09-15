@@ -11,6 +11,9 @@ import {
 import { Marginer } from "../marginer";
 import * as S from "./index";
 
+//lila0915 - fazer o import getOffice
+//lila0915 - await no getOffice porque ele retorna uma promise
+
 export default function OfficeBooking(props) {
     const history = useHistory();
     const goSantos = () => history.push('santosbooking')
