@@ -23,11 +23,16 @@ export const TopContainer = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-width: 350px;
-height: 238px;
+width: 100%;
+height: 415px;
 display:flex;
 flex-direction: column;
 justify-content: center;
+
+@media (max-width: 700px) {
+  width: 350px;
+  max-height: 238px;
+}
 `;
 
 export const TitleContainer= styled.div`
@@ -125,31 +130,47 @@ max-height: 215px;
 export const InstructionText = styled.h3`
 font-family: 'Montserrat', sans-serif;
 font-style: normal;
-font-size: 16px;
+font-size: 40px;
 font-weight: 400;
-line-height: 20px;
+line-height: 49px;
 color: #303033;
 margin: 7px 0px 0px 0px;
+
+@media (max-width: 700px) {
+  font-size: 16px;
+  line-height: 20px;
+}
 `;
 
 export const SubtitleText = styled.h3`
 font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
-line-height: 20px;
+font-size: 32px;
+line-height: 39px;
 color: #303033;
 margin: 0px 0px 12px 0px;
+
+@media (max-width: 700px) {
+  font-size: 16px;
+  line-height: 20px;
+}
 `;
 
 export const SmallText = styled.h5`
 font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: 400;
-font-size: 14px;
-line-height: 17px;
+font-size: 24px;
+line-height: 29px;
 color: #303033;
 margin: 0px 0px 16px 0px;
+
+@media (max-width: 700px) {
+  font-size: 14px;
+  line-height: 17px;
+}
+
 `; 
 
 export const ErrorText = styled.h3`
