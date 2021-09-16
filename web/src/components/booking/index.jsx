@@ -58,7 +58,7 @@ margin:0;
 `;
 
 export const SmallText = styled.h5`
-color: #fff;
+color: RGB(254 68 0);
 font-weight: 500;
 font-size: 11px;
 z-index: 10;
