@@ -42,24 +42,24 @@ export default function ConfirmInformation(props) {
             <S.InnerContainer>
               <BoxContainer>
               <S.SmallText>Confirme seus dados</S.SmallText>
-                <div>
-                  <div>
+                <S.InformationContainer>
+                  <S.InformationColumn>
                     <small>Escritório</small>
                     <small>Data</small>
                     <small>Horário</small>
                     <small>Estação</small>
                     <small>Nome</small>
                     <small>E-mail</small>
-                  </div>
-                  <div>
+                  </S.InformationColumn>
+                  <S.InformationColumn>
                     <small>{office}</small>
                     <small>{date}</small>
                     <small>{time}</small>
-                    <small></small>
+                    <small>MESA</small>
                     <small>{`${name} ${lastName}`}</small>
                     <small>{email}</small>
-                  </div>
-                </div>
+                  </S.InformationColumn>
+                </S.InformationContainer>
                 <Marginer direction="vertical" margin="1em" />
                 <Marginer direction="vertical" margin="1,5em" />
                 <div>

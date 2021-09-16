@@ -34,7 +34,7 @@ export default function BookingSaoPaulo(props) {
 
     //Transformar data no formato "dd/mm/yyyy" - alterar para "yyyy/mm/dd"
     
-    let date = (value.getFullYear() + "-" + (value.getMonth() + 1) + "-" + value.getDay());
+    let date = (value.getDate() + "-" + (value.getMonth() + 1) + "-" + value.getFullYear());
 
     //Variavéis horário
     const morning = "8h às 12h";

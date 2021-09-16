@@ -1,6 +1,14 @@
 
 import styled from "styled-components";
 
+export const AppContainer= styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`;
 
 export const BoxContainer = styled.div`
   width: 280px;
@@ -73,15 +81,6 @@ flex-direction: column;
 padding:0 1.8em;
 `;
 
-export const AppContainer= styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-`;
-
 export const OfficeButton = styled.button`
   width: 100%;
   padding: 20px 40%;
@@ -96,5 +95,16 @@ export const OfficeButton = styled.button`
   &:hover {
     filter: brightness(1.03);
   }
+`;
 
+export const InformationContainer = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+
+export const InformationColumn = styled.div `
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin: 1px;
 `;
