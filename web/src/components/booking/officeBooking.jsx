@@ -24,9 +24,8 @@ export default function OfficeBooking(props) {
       <>
             <S.TopContainer>
               <S.HeaderContainer>
-                         
+                <S.BackDrop>
                 <S.TitleContainer>
-                <img src="assets/logo.png" />
                 <S.HeaderText>Olá!</S.HeaderText>
                 <S.InstructionText>Selecione o escritório para seu agendamento.</S.InstructionText>
                 </S.TitleContainer>
@@ -34,24 +33,24 @@ export default function OfficeBooking(props) {
                 <S.OfficeButton type="button" onClick={goSaoPaulo}>São Paulo</S.OfficeButton>
                 <S.OfficeButton type="button" onClick={goSantos}>Santos</S.OfficeButton>
                 </S.OfficeButtonContainer> 
+                </S.BackDrop>      
               </S.HeaderContainer>
             </S.TopContainer>
             <S.InnerContainer>
               <S.BoxContainer>
-                <div>
+                <S.DateContainer>
                 <S.SubtitleText>Data</S.SubtitleText>  
                 <S.SmallText>DD/MM/AA</S.SmallText> 
-                </div>
-                <div>
+                </S.DateContainer>
+                <S.TimeContainer>
                 <S.SubtitleText>Horários</S.SubtitleText>
                 <S.SmallText>Dia todo (8h até 18h)</S.SmallText>
                 <S.SmallText>Manhã (8h até 12h)</S.SmallText> 
                 <S.SmallText>Tarde (12h até 18h)</S.SmallText> 
-                </div>
+                </S.TimeContainer>
               </S.BoxContainer>
               <S.GoButtonContainer>
                 <S.GoForwardButton>Continuar</S.GoForwardButton>
-                <S.GoBackButton>Voltar</S.GoBackButton>
               </S.GoButtonContainer>
               
             </S.InnerContainer>

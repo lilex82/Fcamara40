@@ -31,34 +31,49 @@ justify-content: center;
 `;
 
 export const TitleContainer= styled.div`
-width: 264px;
-height: 154px;
+width: 957px;
+max-height: 215px;
 display: flex;
 flex-direction: column;
+margin-left: 38px;
+
+@media (max-width: 700px) {
+  width: 264px;
+  max-height: 154px;
+}
+
 `;
 
 export const OfficeButtonContainer= styled.div`
-width: 345px;
-height: 40px;
+width: 570px;
+max-height: 60px;
 display: flex;
 justify-content: space-between;
 margin-top: 44px;
-padding: 0px;
+margin-left: 38px;
+
+@media (max-width: 700px) {
+  width: 310px;
+  max-height: 40px;
+}
+
+
 `;
 
 export const BoxContainer = styled.div`
-width: 100%;
+width: 1305px;
+max-height: 600px;
 display: flex;
 flex-direction: column; 
-align-items: flex-start;
+justify-content: space-between;
 margin-top:10px;
+
+@media (max-width: 700px) {
+  width: 328px;
+  max-height: 400px;
+}
 `;
 
-export const CalendarContainer = styled.div`
-width: 100%;
-display: flex;
-align-items: flex-start;
-`;
 
 export const GoButtonContainer = styled.div`
 width: 100%;
@@ -76,22 +91,35 @@ align-items: center;
 
 export const BackDrop = styled.div`
 position: absolute;
-width: 414px;
-height: 325px;
+width: 100%;
+max-height: 415px;
 left: -3px;
 top: 0px;
-background: rgba(254, 68, 0, 0.5);
-opacity: 0.3;
+background: rgba(254, 68, 0, 0.3);
 border-radius: 0px 0px 99px 0px;
+
+@media (max-width: 700px) {
+  width: 414px;
+  max-height: 325px;
+}
+
 `;
 
 export const HeaderText =styled.h2`
 font-family: 'Montserrat', sans-serif;
-font-size: 24px;
+font-size: 40px;
 font-weight: 600;
 line-height: 29px;
 color: #303033;
 margin-top: 38px;
+width: 957px;
+max-height: 215px;
+
+@media (max-width: 700px) {
+  font-size: 24px;
+  width: 414px;
+  max-height: 325px;
+}
 `;
 
 export const InstructionText = styled.h3`
@@ -142,8 +170,8 @@ padding:0 1.8em;
 `;
 
 export const OfficeButton = styled.button`
-  width: 172px;
-  height: 40px;
+  width: 265px;
+  height: 55px;
   color: #303033;
   font-size: 14px;
   font-weight: 400;
@@ -152,15 +180,43 @@ export const OfficeButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: all, 240ms ease-in-out;
-  background: #fff;
+  background: none;
   &:hover {
     filter: brightness(1.03);
   }
+
+  @media (max-width: 700px) {
+  width: 150px;
+  max-height: 40px;
+}
 `;
 
 export const InformationContainer = styled.div`
 display: flex;
 justify-content: space-between;
+`;
+
+export const DateContainer = styled.div`
+width: 472px;
+display: flex;
+flex-direction: column;
+
+@media (max-width: 700px) {
+  width: 202px;
+}
+`;
+
+export const TimeContainer = styled.div`
+width: 318px;
+max-height: 176px;
+display: flex;
+flex-direction: column;
+
+
+@media (max-width: 700px) {
+  width: 178px;
+  max-height: 110px;
+}
 `;
 
 export const InformationColumn = styled.div `
