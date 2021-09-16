@@ -24,7 +24,7 @@ export default function OfficeBooking(props) {
       <>
             <S.TopContainer>
               <S.HeaderContainer>
-                <S.BackDrop />            
+                         
                 <S.TitleContainer>
                 <img src="assets/logo.png" />
                 <S.HeaderText>Olá!</S.HeaderText>
