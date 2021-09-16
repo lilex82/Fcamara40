@@ -63,36 +63,35 @@ export default function BookingSaoPaulo(props) {
     return (
         <>
                 <S.TopContainer>
-                <S.BackDrop />
                 <S.HeaderContainer>
+                <S.BackDrop>
                 <S.TitleContainer>
                     <S.HeaderText>Vamos lá..</S.HeaderText>
                     <S.InstructionText>Agora, selecione a data.</S.InstructionText>
                 </S.TitleContainer>
+                </S.BackDrop>
                 </S.HeaderContainer>
                 </S.TopContainer>
                 <S.InnerContainer>
-                    <BoxContainer>
-                    <div>
+                    <S.DateContainer>
                     <S.SubtitleText>Data</S.SubtitleText>  
                     <S.SmallText type="button" onClick={() => setCalendar(!calendar)}>DD/MM/AA</S.SmallText>
                         {calendar ? <Calendar
                             onChange={onChange}
                             value={value}
                             minDate={new Date()}
-                        /> : <div>
-                        <S.SubtitleText>Horários</S.SubtitleText>
+                        /> : <S.TimeContainer>
+                        <S.SubtitleText>Horários</S.SubtitleText>       
                         <S.SmallText type="button" button value={fullTime} onClick={e => setTime(e.target.value)}>{fullTime}</S.SmallText>
                         <S.SmallText type="button" value={morning} onClick={e => setTime(e.target.value)}>{morning}</S.SmallText>
                         <S.SmallText type="button" button value={afternoon} onClick={e => setTime(e.target.value)}>{afternoon}</S.SmallText> 
-                        </div>   }
-                    </div>             
-                   
+                        </S.TimeContainer> }
+                    </S.DateContainer>                          
+                    <S.GoButtonContainer>
                         <S.GoForwardButton type="submit" onClick={confirm}>Continuar</S.GoForwardButton>
                         <S.GoBackButton type="submit" onClick={goBack}>Voltar</S.GoBackButton>
-                    </BoxContainer>
+                    </S.GoButtonContainer>
                 </S.InnerContainer>
         </>        
-
     );
 }

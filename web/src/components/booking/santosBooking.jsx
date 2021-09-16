@@ -60,38 +60,39 @@ export default function BookingSantos(props) {
         }
     }
     
-    return (          
-        <S.AppContainer>
-            <S.BoxContainer>
+    return (     
+        <>
                 <S.TopContainer>
-                <S.BackDrop />
                 <S.HeaderContainer>
-                    <S.HeaderText>Escritório {office}</S.HeaderText>
-                    <S.SmallText>Escolha a data e o período desejados</S.SmallText>
+                <S.BackDrop>
+                <S.TitleContainer>
+                    <S.HeaderText>Vamos lá..</S.HeaderText>
+                    <S.InstructionText>Agora, selecione a data.</S.InstructionText>
+                </S.TitleContainer>
+                </S.BackDrop>
                 </S.HeaderContainer>
                 </S.TopContainer>
                 <S.InnerContainer>
-                <button onClick={() => setCalendar(!calendar)}>Click</button>
-                    
-                    <BoxContainer>
+                    <S.DateContainer>
+                    <S.SubtitleText>Data</S.SubtitleText>  
+                    <S.SmallText type="button" onClick={() => setCalendar(!calendar)}>DD/MM/AA</S.SmallText>
                         {calendar ? <Calendar
                             onChange={onChange}
                             value={value}
                             minDate={new Date()}
-                        /> : <div>
-                            <button value={morning} onClick={e => setTime(e.target.value)}>{morning}</button>
-                            <button value={afternoon} onClick={e => setTime(e.target.value)}>{afternoon}</button>
-                            <button value={fullTime} onClick={e => setTime(e.target.value)}>{fullTime}</button>
-                        </div>   }
-                                  
-                        <Marginer direction="vertical" margin="1em" />
-                        <Marginer direction="vertical" margin="1,5em" />
+                        /> : <S.TimeContainer>
+                        <S.SubtitleText>Horários</S.SubtitleText>       
+                        <S.SmallText type="button" button value={fullTime} onClick={e => setTime(e.target.value)}>{fullTime}</S.SmallText>
+                        <S.SmallText type="button" value={morning} onClick={e => setTime(e.target.value)}>{morning}</S.SmallText>
+                        <S.SmallText type="button" button value={afternoon} onClick={e => setTime(e.target.value)}>{afternoon}</S.SmallText> 
+                        </S.TimeContainer> }
+                    </S.DateContainer>                          
+                    <S.GoButtonContainer>
                         <S.GoForwardButton type="submit" onClick={confirm}>Continuar</S.GoForwardButton>
                         <S.GoBackButton type="submit" onClick={goBack}>Voltar</S.GoBackButton>
-                    </BoxContainer>
+                    </S.GoButtonContainer>
                 </S.InnerContainer>
-            </S.BoxContainer>
-        </S.AppContainer>
+        </>     
     );
 }
 

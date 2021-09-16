@@ -51,8 +51,7 @@ export default function OfficeBooking(props) {
               </S.BoxContainer>
               <S.GoButtonContainer>
                 <S.GoForwardButton>Continuar</S.GoForwardButton>
-              </S.GoButtonContainer>
-              
+              </S.GoButtonContainer>             
             </S.InnerContainer>
       </>
     );

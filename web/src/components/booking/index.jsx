@@ -248,8 +248,8 @@ margin: 1px;
 `;
 
 export const GoForwardButton = styled.button`
-  width: 272px;
-  height: 42px;
+  width: 370px;
+  height: 40px;
   color: #FCFCFC;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -264,11 +264,17 @@ export const GoForwardButton = styled.button`
   &:hover {
     filter: brightness(1.03);
   }
+
+  @media (max-width: 700px) {
+  width: 272px;
+  height: 42px;
+  font-size: 16px;
+  }
 `;
 
 export const GoBackButton = styled.button`
-  width: 272px;
-  height: 42px;
+  width: 370px;
+  height: 40px;
   color: #FE4400;
   padding: 10px;
   margin-top: 11px;
@@ -283,6 +289,12 @@ export const GoBackButton = styled.button`
   background: #FCFCFC;
   &:hover {
     filter: brightness(1.03);
+  }
+
+  @media (max-width: 700px) {
+  width: 272px;
+  height: 42px;
+  font-size: 16px;
   }
 `;
 
