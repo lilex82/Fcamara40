@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Calendar from 'react-calendar';
-import {
-    BoxContainer,
-    FormContainer,
-    Input,
-    SubmitButton,
-  } from "../accountBox/common";
 import { Marginer } from "../marginer";
 import * as S from "./index";
 import 'react-calendar/dist/Calendar.css';
