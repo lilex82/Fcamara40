@@ -13,7 +13,7 @@ async function getAvailableTime(officeId, date) {
 
 
 
-    const totalManha = await Book.count({
+    const totalMorning = await Book.count({
         where: {
             [Op.or]: [
                 { ...data, time: 'manha' },
@@ -21,9 +21,9 @@ async function getAvailableTime(officeId, date) {
             ] //spread operator
         }
     })
-    console.log(totalManha)
+    console.log(totalMorning)
 
-    const totalTarde = await Book.count({
+    const totalAfternoon = await Book.count({
         where: {
             [Op.or]: [
                 { ...data, time: 'tarde' },
@@ -32,21 +32,21 @@ async function getAvailableTime(officeId, date) {
         }
     })
 
-    const periodos = []
+    const periods = []
 
-    if (totalManha < maxCapacity) {
-        periodos.push('manha')
+    if (totalMorning < maxCapacity) {
+        periods.push('manha')
     }
 
-    if (totalTarde < maxCapacity) {
-        periodos.push('tarde')
+    if (totalAfternoon < maxCapacity) {
+        periods.push('tarde')
     }
 
-    if (periodos.includes('manha') && periodos.includes('tarde')) {
-        periodos.push('integral')
+    if (periods.includes('manha') && periods.includes('tarde')) {
+        periods.push('integral')
     }
 
-    return periodos
+    return periods
 }
 
 

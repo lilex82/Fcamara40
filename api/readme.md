@@ -100,6 +100,6 @@ npx sequelize-cli seed:generate --name create-offices
 npx sequelize-cli model:generate --name Book --attributes date:date,time:string,email:string
 ```
 
-
-Gerar sorteo de mesa vai ficar para o projeto futuro: 
+## Proximos passos
+Gerar sorteio de mesa vai ficar para o projeto futuro: 
 (Pending) Models/table

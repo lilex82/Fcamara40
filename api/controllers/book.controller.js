@@ -8,7 +8,8 @@ class BookController {
             date: req.body.date,
             time: req.body.time,
             officeId: req.body.officeId,
-            email: req.body.email
+            email: req.body.email, 
+            firstName: req.body.firstName
         }
         const availableTime = await getAvailableTime(bookingData.officeId, bookingData.date)
         if (!availableTime.includes(bookingData.time)) {

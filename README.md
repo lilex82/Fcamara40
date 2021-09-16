@@ -3,42 +3,46 @@ Projeto final do Hackathon do Programa de Formação Season 2 do grupo FCamara.
 
 Aplicação web, onde o consultor realiza o agendamento, com dia e horário, para poder ir ao escritório.
 
-## Fluxo do usuário
-Escolher oficina ( São Paulo, Santos)
-Escolher data e horario
-Inserir o e-mail
+## Estrutura do projeto
+Dentro da pasta o projeto temos 2 pastas:
+- Web: React.JS application.
+- API: Express.JS application.
+ Cada pasta contem seu proprio `package.json` definindo as respectivas dependencias com autonomia integra de publicar novas versões do package tanto no npm ou yarn.  
+```
+|- package.json => pasta raiz do projeto
+|------ web
+|-------- package.json  => Express.JS project
+|------ api
+|-------- package.json => React APP
+```
 
-## Como utilizar
-Pré Requisito
-Para usar este repositório, você precisa instalar:
-
+## Como instalar e executar 
+- Para usar este repositório, você precisa instalar:
+1. Clonar o repositorio no local:
 ```
 git clone https://github.com/lilex82/Fcamara.git
 ```
-## Tecnologias
+2. Instalar as dependencias na pasta raiz
+-  `$npm install`
+-  `$npm install react-calendar `
 
--<a href="https://expressjs.com">Express</a>
--<a href="https://sequelize.org/master/">Sequelize ORM</a>
--<a href="https://www.postgresql.org/">PostgreSQL</a>
--<a href="https://reactjs.org/">React</a>
-
-
-## FRONTEND:
-```
-npm install
-```
-### Available Scripts
-In the project directory, you can run:
-#### `npm start`
+3. Rodar a aplicação 
+-   `npm start`
 
 localhost:xxxx
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Abrir [http://localhost:3000](http://localhost:3000)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias
 
-## BACKEND:
+- [Express]("https://expressjs.com")
+- [Sequelize ORM]("https://sequelize.org/master/")
+- [PostgreSQL]("https://www.postgresql.org/")
+- [React]("https://reactjs.org/")
 
+## Fluxo do usuário
+- Escolher oficina ( São Paulo, Santos)
+- Escolher data e horario
+- Inserir o e-mail
 
 
 ## Membros
