@@ -31,8 +31,6 @@ export default function BookingSaoPaulo(props) {
 
             
     }
-
-    //Transformar data no formato "dd/mm/yyyy" - alterar para "yyyy/mm/dd"
     
     let date = (value.getDate() + "-" + (value.getMonth() + 1) + "-" + value.getFullYear());
 
