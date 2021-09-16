@@ -8,24 +8,26 @@ class BookController {
             date: req.body.date,
             time: req.body.time,
             officeId: req.body.officeId,
-            email: req.body.email, 
-            firstName: req.body.firstName
+            email: req.body.email,
+            firstName: req.body.firstName,
+            lastName: req.body.firstName,
         }
         const availableTime = await getAvailableTime(bookingData.officeId, bookingData.date)
         if (!availableTime.includes(bookingData.time)) {
-            res.status(400) 
+            res.status(400)
             return res.send('Periodo indisponivel para este dia')
         }
         //criar o booking
         const book = await Book.create(bookingData)
+        //Numero sorteo 
 
         //retornar of book feito
         res.json(book)
     }
-    
 
 
-    
+
+
 }
 
 module.exports = BookController

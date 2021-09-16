@@ -25,6 +25,7 @@ git clone https://github.com/lilex82/Fcamara.git
 2. Instalar as dependencias na pasta raiz
 -  `$npm install`
 -  `$npm install react-calendar `
+-  `$npm install react-scripts`
 
 3. Rodar a aplicação 
 -   `npm start`
