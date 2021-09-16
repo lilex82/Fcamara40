@@ -20,13 +20,11 @@ export default function ShowInformation(props) {
             <S.TopContainer>
               <S.BackDrop />
               <S.HeaderContainer>
-                <S.HeaderText>Sistema de</S.HeaderText>
-                <S.HeaderText>Agendamento</S.HeaderText>
+                <S.HeaderText>Agendado com sucesso!</S.HeaderText>
               </S.HeaderContainer>
             </S.TopContainer>
             <S.InnerContainer>
               <BoxContainer>
-              <S.SmallText>Seu agendamento foi realizado com sucesso</S.SmallText>
               <S.SmallText>Escritório</S.SmallText>
                     <S.SmallText>Data</S.SmallText>
                     <S.SmallText>Horário</S.SmallText>
