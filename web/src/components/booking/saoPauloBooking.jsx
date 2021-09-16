@@ -21,6 +21,7 @@ export default function BookingSaoPaulo(props) {
         history.goBack()
       }
     
+    const [calendar, setCalendar] = useState(false);
     //react-calendar
     
     function onChange(nextValue) {
@@ -73,18 +74,19 @@ export default function BookingSaoPaulo(props) {
                 </S.HeaderContainer>
                 </S.TopContainer>
                 <S.InnerContainer>
+                <button onClick={() => setCalendar(!calendar)}>Click</button>
+                    
                     <BoxContainer>
-                        <Calendar
+                        {calendar ? <Calendar
                             onChange={onChange}
                             value={value}
                             minDate={new Date()}
-                        />
-
-                        <div>
+                        /> : <div>
                             <button value={morning} onClick={e => setTime(e.target.value)}>{morning}</button>
                             <button value={afternoon} onClick={e => setTime(e.target.value)}>{afternoon}</button>
                             <button value={fullTime} onClick={e => setTime(e.target.value)}>{fullTime}</button>
-                        </div>            
+                        </div>   }
+                                  
                         <Marginer direction="vertical" margin="1em" />
                         <Marginer direction="vertical" margin="1,5em" />
                         <SubmitButton type="submit" onClick={confirm}>Continuar</SubmitButton>
