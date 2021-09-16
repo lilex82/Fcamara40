@@ -16,30 +16,45 @@ import * as S from "./index";
 
 export default function OfficeBooking(props) {
     const history = useHistory();
+
     const goSantos = () => history.push('santosbooking')
     const goSaoPaulo = () => history.push('saopaulobooking')
 
     return (
-        <S.AppContainer>
-          <S.BoxContainer>
+      <>
             <S.TopContainer>
-              <S.BackDrop />
               <S.HeaderContainer>
-                <S.HeaderText>Sistema de</S.HeaderText>
-                <S.HeaderText>Agendamento</S.HeaderText>
-                <S.SmallText>Escolha o escritório</S.SmallText>
+                <S.BackDrop />            
+                <S.TitleContainer>
+                <img src="assets/logo.png" />
+                <S.HeaderText>Olá!</S.HeaderText>
+                <S.InstructionText>Selecione o escritório para seu agendamento.</S.InstructionText>
+                </S.TitleContainer>
+                <S.OfficeButtonContainer>
+                <S.OfficeButton type="button" onClick={goSaoPaulo}>São Paulo</S.OfficeButton>
+                <S.OfficeButton type="button" onClick={goSantos}>Santos</S.OfficeButton>
+                </S.OfficeButtonContainer> 
               </S.HeaderContainer>
             </S.TopContainer>
             <S.InnerContainer>
-              <BoxContainer>
-                <S.OfficeButton type="button" onClick={goSaoPaulo}>São Paulo</S.OfficeButton>
-                <Marginer direction="vertical" margin="1em" />
-                <Marginer direction="vertical" margin="1,5em" />
-                <S.OfficeButton type="button" onClick={goSantos}>Santos</S.OfficeButton>
-              </BoxContainer>
+              <S.BoxContainer>
+                <div>
+                <S.SubtitleText>Data</S.SubtitleText>  
+                <S.SmallText>DD/MM/AA</S.SmallText> 
+                </div>
+                <div>
+                <S.SubtitleText>Horários</S.SubtitleText>
+                <S.SmallText>Dia todo (8h até 18h)</S.SmallText>
+                <S.SmallText>Manhã (8h até 12h)</S.SmallText> 
+                <S.SmallText>Tarde (12h até 18h)</S.SmallText> 
+                </div>
+              </S.BoxContainer>
+              <S.GoButtonContainer>
+                <S.GoForwardButton>Continuar</S.GoForwardButton>
+                <S.GoBackButton>Voltar</S.GoBackButton>
+              </S.GoButtonContainer>
+              
             </S.InnerContainer>
-          </S.BoxContainer>
-        </S.AppContainer>
+      </>
     );
-
 }

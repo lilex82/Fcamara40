@@ -66,7 +66,6 @@ export default function BookingSantos(props) {
                 <S.TopContainer>
                 <S.BackDrop />
                 <S.HeaderContainer>
-                    <S.HeaderText>Agendamento</S.HeaderText>
                     <S.HeaderText>Escritório {office}</S.HeaderText>
                     <S.SmallText>Escolha a data e o período desejados</S.SmallText>
                 </S.HeaderContainer>
@@ -87,8 +86,8 @@ export default function BookingSantos(props) {
                                   
                         <Marginer direction="vertical" margin="1em" />
                         <Marginer direction="vertical" margin="1,5em" />
-                        <SubmitButton type="submit" onClick={confirm}>Continuar</SubmitButton>
-                        <SubmitButton type="submit" onClick={goBack}>Voltar</SubmitButton>
+                        <S.GoForwardButton type="submit" onClick={confirm}>Continuar</S.GoForwardButton>
+                        <S.GoBackButton type="submit" onClick={goBack}>Voltar</S.GoBackButton>
                     </BoxContainer>
                 </S.InnerContainer>
             </S.BoxContainer>

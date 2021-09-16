@@ -49,9 +49,7 @@ export default function UserForm(props) {
             <S.TopContainer>
             <S.BackDrop />
             <S.HeaderContainer>
-                <S.HeaderText>Adicione</S.HeaderText>
-                <S.HeaderText>seus dados</S.HeaderText>
-                
+                <S.HeaderText>Adicione seus dados</S.HeaderText>                
             </S.HeaderContainer>
             </S.TopContainer>
             <S.InnerContainer>
@@ -64,8 +62,8 @@ export default function UserForm(props) {
                 </FormContainer>
                 <Marginer direction="vertical" margin="1em" />
                 <Marginer direction="vertical" margin="1,5em" />
-                <SubmitButton type="submit" onClick={HandleUser}>Continuar</SubmitButton>
-                <SubmitButton type="submit" onClick={goBack}>Voltar</SubmitButton>
+                <S.GoForwardButton type="submit" onClick={HandleUser}>Continuar</S.GoForwardButton>
+                <S.GoBackButton type="submit" onClick={goBack}>Voltar</S.GoBackButton>
                 {errorMsg && <S.SmallText className="errorMsg">{errorMsg}</S.SmallText> }
             </BoxContainer>
             </S.InnerContainer>

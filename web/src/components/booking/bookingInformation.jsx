@@ -27,19 +27,17 @@ export default function ShowInformation(props) {
             <S.InnerContainer>
               <BoxContainer>
               <S.SmallText>Seu agendamento foi realizado com sucesso</S.SmallText>
-                <table>
-                    <tr>Data </tr>
-                    <tr>Horário </tr>
-                    <tr>Estação de trabalho</tr>
-                </table>
-                <Marginer direction="vertical" margin="1em" />
-                <Marginer direction="vertical" margin="1,5em" />
-                <table>
-                    <thead>Cuidados</thead>
-                    <tr>O uso de máscara é obrigatório</tr>
-                    <tr>Leve seu álcool em gel</tr>
-                    <tr>Mantenha o distanciamento social</tr>
-                </table>
+              <S.SmallText>Escritório</S.SmallText>
+                    <S.SmallText>Data</S.SmallText>
+                    <S.SmallText>Horário</S.SmallText>
+                    <S.SmallText>Estação</S.SmallText>
+                    <S.SmallText>Nome</S.SmallText>
+                    <S.SmallText>E-mail</S.SmallText>
+                <S.AlertContainer>
+                  <S.SmallText>Cuidados</S.SmallText>
+                  <S.SmallText>O uso de máscara é obrigatório</S.SmallText>
+                  <S.SmallText>Mantenha o distanciamento social (2m)</S.SmallText>
+                </S.AlertContainer>
               </BoxContainer>
             </S.InnerContainer>
           </S.BoxContainer>
