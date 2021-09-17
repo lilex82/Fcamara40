@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import DateInput from '../../components/Form/DateInput';
+import PeriodInput from '../../components/Form/PeriodInput';
 import OfficeButton from '../../components/OfficeButton';
 import { getInstructionFromCurrentState } from './helpers';
 import S from './style'
@@ -7,7 +8,8 @@ import S from './style'
 export default function OfficePage() {
     const [currentState, setCurrentState] = useState({
         office: {},
-        date: undefined
+        date: undefined,
+        period: undefined
     })
 
     const [pageText, setPageText] = useState(
@@ -32,6 +34,14 @@ export default function OfficePage() {
             date
         }))
     }
+    const handleSelectedPeriod =(period) =>{
+        setCurrentState((state) => ({
+            ...state,
+            period
+        }))
+    }
+
+
 
     return (
         <S.Page>
@@ -43,6 +53,7 @@ export default function OfficePage() {
             </S.PageHeader>
             <S.PageBody>
                 <DateInput onSelect ={handleSelectedDate} />
+                <PeriodInput onSelect ={handleSelectedPeriod} date= {currentState.date} office={currentState.office}/>
             </S.PageBody>
         </S.Page>
     )

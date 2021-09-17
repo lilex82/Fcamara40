@@ -1,6 +1,4 @@
 
-import S from './style'
-
 export default function DateInput({onSelect}) {
     const selectDate = (value) => {
         onSelect(value)
@@ -15,3 +13,4 @@ export default function DateInput({onSelect}) {
         </label>
     )
 }
+
