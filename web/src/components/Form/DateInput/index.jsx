@@ -1,15 +1,17 @@
 
 import S from './style'
 
-export default function DateInput(){
-    const selectDate = (value)=>{
-
-        console.log(value)
+export default function DateInput({onSelect}) {
+    const selectDate = (value) => {
+        onSelect(value)
     }
-    return(
+
+    return (
         <label>
             <span>Data</span>
-            <input type='date' onChange={(input)=> selectDate(input.target.value)} />
+            <input type='date'
+            onChange={(input) => selectDate(input.target.value)} />
+
         </label>
     )
 }

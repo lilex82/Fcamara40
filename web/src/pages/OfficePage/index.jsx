@@ -6,7 +6,8 @@ import S from './style'
 
 export default function OfficePage() {
     const [currentState, setCurrentState] = useState({
-        office: {}
+        office: {},
+        date: undefined
     })
 
     const [pageText, setPageText] = useState(
@@ -20,7 +21,15 @@ export default function OfficePage() {
     const handleSelectedOffice = (office) => {
         // criado um novo objeto chamado currentState alterando propriedade office ln. 8
         setCurrentState((state) => ({
-            ...state, office
+            ...state,
+            office
+        }))
+    }
+
+    const handleSelectedDate =(date) =>{
+        setCurrentState((state) => ({
+            ...state,
+            date
         }))
     }
 
@@ -33,7 +42,7 @@ export default function OfficePage() {
                 <OfficeButton onSelect={handleSelectedOffice} selected={currentState.office} />
             </S.PageHeader>
             <S.PageBody>
-                <DateInput/>
+                <DateInput onSelect ={handleSelectedDate} />
             </S.PageBody>
         </S.Page>
     )
