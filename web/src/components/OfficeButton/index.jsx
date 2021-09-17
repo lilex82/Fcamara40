@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getOffices } from '../services/api'
 import S from './style'
 
-//tag <OfficeButton onSelect={(office)=>{}} selected={{vazio ou id}}/> prop/variavel de um objeto = selected
+//Lila 0916 tag <OfficeButton onSelect={(office)=>{}} selected={{vazio ou id}}/> prop/variavel de um objeto = selected
 export default function OfficeButton({ onSelect, selected }) {
     const [offices, setOffices] = useState([])
 

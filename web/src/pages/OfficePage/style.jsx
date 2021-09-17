@@ -35,15 +35,20 @@ const HeaderInstruction = styled.h4`
 `;
 
 const PageBody = styled.div`
-
+width: 100%;
+max-width: 100%;
+padding-top: 46px;
+padding-left: 135px;
+box-sizing: border-box;
+color: #303033;
 `;
 
 export default {
-Page,
-PageHeader,
-Logo,
-HeaderTitle,
-HeaderInstruction,
-PageBody
+    Page,
+    PageHeader,
+    Logo,
+    HeaderTitle,
+    HeaderInstruction,
+    PageBody
 }
 
