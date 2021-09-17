@@ -2,13 +2,6 @@
 
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import {
-    BoxContainer,
-    FormContainer,
-    Input,
-    SubmitButton,
-  } from "../accountBox/common";
-import { Marginer } from "../marginer";
 import * as S from "./index";
 
 
@@ -34,26 +27,26 @@ export default function OfficeBooking(props) {
                 <S.OfficeButtonContainer>
                 <S.OfficeButton type="button" onClick={goSaoPaulo}>São Paulo</S.OfficeButton>
                 <S.OfficeButton type="button" onClick={goSantos}>Santos</S.OfficeButton>
-                </S.OfficeButtonContainer> 
-                </S.BackDrop>      
+                </S.OfficeButtonContainer>
+                </S.BackDrop>
               </S.HeaderContainer>
             </S.TopContainer>
             <S.InnerContainer>
               <S.BoxContainer>
                 <S.DateContainer>
-                <S.SubtitleText>Data</S.SubtitleText>  
-                <S.SmallText>DD/MM/AA</S.SmallText> 
+                <S.SubtitleText>Data</S.SubtitleText>
+                <S.SmallText>DD/MM/AA</S.SmallText>
                 </S.DateContainer>
                 <S.TimeContainer>
                 <S.SubtitleText>Horários</S.SubtitleText>
                 <S.SmallText>Dia todo (8h até 18h)</S.SmallText>
-                <S.SmallText>Manhã (8h até 12h)</S.SmallText> 
-                <S.SmallText>Tarde (12h até 18h)</S.SmallText> 
+                <S.SmallText>Manhã (8h até 12h)</S.SmallText>
+                <S.SmallText>Tarde (12h até 18h)</S.SmallText>
                 </S.TimeContainer>
               </S.BoxContainer>
               <S.GoButtonContainer>
                 <S.GoForwardButton>Continuar</S.GoForwardButton>
-              </S.GoButtonContainer>             
+              </S.GoButtonContainer>
             </S.InnerContainer>
       </>
     );
