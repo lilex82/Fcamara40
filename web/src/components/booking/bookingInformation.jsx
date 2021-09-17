@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import {
     BoxContainer,
-    FormContainer,
-    Input,
-    SubmitButton,
   } from "../accountBox/common";
 import { Marginer } from "../marginer";
 import * as S from "./index";
+
 
 export default function ShowInformation(props) {
 

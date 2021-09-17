@@ -11,6 +11,7 @@ import {
 import { Marginer } from "../marginer";
 import * as S from "./index";
 
+
 //lila0915 - fazer o import getOffice
 //lila0915 - await no getOffice porque ele retorna uma promise
 
@@ -26,6 +27,7 @@ export default function OfficeBooking(props) {
               <S.HeaderContainer>
                 <S.BackDrop>
                 <S.TitleContainer>
+                  <S.Logo src='/img/grupo-fcamara-laranja.png'/>
                 <S.HeaderText>Olá!</S.HeaderText>
                 <S.InstructionText>Selecione o escritório para seu agendamento.</S.InstructionText>
                 </S.TitleContainer>

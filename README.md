@@ -26,6 +26,7 @@ git clone https://github.com/lilex82/Fcamara.git
 -  `$npm install`
 -  `$npm install react-calendar `
 -  `$npm install react-scripts`
+-  `$npm react-router-dom`
 
 3. Rodar a aplicação 
 -   `npm start`

@@ -1,6 +1,13 @@
 
 import styled from "styled-components";
 
+// logo 
+export const Logo =styled.img`
+max-width: 273px;
+height: 59px;
+`;
+
+
 //Container
 export const AppContainer= styled.div`
 width: 100%;
@@ -95,7 +102,6 @@ align-items: center;
 `;
 
 export const BackDrop = styled.div`
-position: absolute;
 width: 100%;
 max-height: 415px;
 left: -3px;
@@ -104,7 +110,6 @@ background: rgba(254, 68, 0, 0.3);
 border-radius: 0px 0px 99px 0px;
 
 @media (max-width: 700px) {
-  width: 414px;
   max-height: 325px;
 }
 
@@ -297,4 +302,6 @@ export const GoBackButton = styled.button`
   font-size: 16px;
   }
 `;
+
+
 

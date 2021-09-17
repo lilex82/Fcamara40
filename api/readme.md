@@ -53,7 +53,9 @@
 {
   "date": '2021-09-14',
   "periodo":"string", 
-  "email" : "user@email.com"
+  "email" : "user@email.com",
+  "firstName" : "string",
+  "lastName" : "string"
 }
  
 // success - status code: 200 - agendamento realizado

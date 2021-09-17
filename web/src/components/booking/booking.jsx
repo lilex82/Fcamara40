@@ -9,6 +9,7 @@ import {
 import { Marginer } from "../marginer";
 import * as S from "./index";
 
+
 export default function ConfirmInformation(props) {
     //let date = new URLSearchParams(window.location.search).get('date')
     const { office } = useParams();

@@ -10,14 +10,13 @@ import BookingSantos from './components/booking/santosBooking';
 import UserForm from './components/booking/userData';
 import ConfirmInformation from './components/booking/booking';
 import ShowInformation from './components/booking/bookingInformation';
+import OfficePage from './pages/OfficePage';
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path='/' component={LoginForm} />
-                <Route exact path='/signup' component={SignUpForm} />
-                <Route exact path='/officebooking' component={OfficeBooking} />
+                <Route exact path='/' component={OfficePage} />
                 <Route exact path='/saopaulobooking' component={BookingSaoPaulo} />
                 <Route exact path='/santosbooking' component={BookingSantos} />
                 <Route exact path='/user/:office&:date&:time' component={UserForm} />
